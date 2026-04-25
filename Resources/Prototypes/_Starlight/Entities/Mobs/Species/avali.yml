@@ -24,13 +24,13 @@
 - type: entity
   save: false
   name: Urist McAvali
-  # Warfarer: No BaseSpeciesPickupable
+  # CS: No BaseSpeciesPickupable
   parent: [ BaseColdBird, BaseMobSpeciesOrganic, BaseInventoryAvali ]
   id: BaseMobAvali
   abstract: true
   components:
-    # Warfarer: No Language system
-    # Warfarer: No Absorbable
+    # CS: No Language system
+    # CS: No Absorbable
     - type: Tag
       tags:
         - CanPilot
