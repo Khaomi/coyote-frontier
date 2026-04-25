@@ -23,6 +23,11 @@
   minWidth: 0.55
   defaultWidth: 0.8
   # End CS
+  # CS: Need Kind for some reason
+  kind:
+    - BasicHumanlike
+    - BasicFurry
+  # End CS
 
 - type: speciesBaseSprites
   id: MobResomiSprites
@@ -46,42 +51,24 @@
     Special: MobHumanoidAnyMarking
     Tail: MobHumanoidAnyMarking
     TailExtras: MobHumanoidAnyMarking
+    # CS Start
+    TailBehind: MobHumanoidAnyMarking
+    TailOversuit: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    Genital: MobHumanoidAnyMarking
+    RArmExtension: MobHumanoidAnyMarking # Adds Wing Slot, this will look weird as fuck
+    # End CS
 
 - type: markingPoints
   id: MobResomiMarkingLimits
   onlyWhitelisted: true
   points:
-    Special:
-      points: 10
-      required: false
-    Hair:
-      points: 1
-      required: false
-    TailExtras:
-      points: 3
-      required: false
+    # CS: Unlimited markings because why not
     Tail:
-      points: 1
       required: true
+      points: 999
       defaultMarkings: [ ResomiTailFeathered ]
-    Legs:
-      points: 6
-      required: false
-    Arms:
-      points: 6
-      required: false
-    Head:
-      points: 4
-      required: false
-    HeadTop:
-      points: 4
-      required: false
-    HeadSide:
-      points: 2
-      required: false
-    Chest:
-      points: 4
-      required: false
 
 - type: humanoidBaseSprite
   id: MobResomiEyes
