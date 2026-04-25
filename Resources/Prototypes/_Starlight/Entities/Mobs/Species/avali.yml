@@ -29,8 +29,7 @@
   id: BaseMobAvali
   abstract: true
   components:
-    # CS: No Language system
-    # CS: No Absorbable
+    # CS: No Languages, and Absorbable
     - type: Tag
       tags:
         - CanPilot
@@ -43,12 +42,6 @@
       hideLayersOnEquip:
       - Tail
       - HeadTop
-    # CS: Use Needs
-    - type: Needs
-      needs:
-      - NeedHungerDefault
-      - NeedThirstDefault
-    # End CS
     - type: Body
       prototype: Avali
       requiredLegs: 2

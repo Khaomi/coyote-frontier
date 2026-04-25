@@ -16,10 +16,13 @@
   youngAge: 103
   oldAge: 257
   maxAge: 430
-  customName: true # Starlight
-  standardSize: 150
-  standardWeight: 40
-  standardDensity: 17
+  # CS: custom name no workie :(
+  # CS: Small enough to fit in a bag
+  minHeight: 0.6
+  defaultHeight: 0.8
+  minWidth: 0.55
+  defaultWidth: 0.8
+  # End CS
 
 - type: speciesBaseSprites
   id: MobResomiSprites
