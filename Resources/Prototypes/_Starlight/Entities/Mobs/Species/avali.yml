@@ -43,18 +43,12 @@
       hideLayersOnEquip:
       - Tail
       - HeadTop
-    - type: Hunger # on 2x more
-      thresholds:
-        Overfed: 250
-        Okay: 200
-        Peckish: 150
-        Starving: 100
-        Dead: 0
-      # CS: All species have the same hunger rate
-    - type: Thirst
-    - type: Icon
-      sprite: _Starlight/Mobs/Species/Avali/parts.rsi
-      state: full
+    # CS: Use Needs
+    - type: Needs
+      needs:
+      - NeedHungerDefault
+      - NeedThirstDefault
+    # End CS
     - type: Body
       prototype: Avali
       requiredLegs: 2
