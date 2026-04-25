@@ -93,9 +93,6 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
-      head-dog:
-      - state: equipped-head-light-dog
-        shader: unshaded
       # Starlight - Start
       head-avali:
       - state: equipped-head-avali
@@ -388,9 +385,6 @@
         shader: unshaded
       head-vox:
       - state: equipped-head-light-vox
-        shader: unshaded
-      head-dog:
-      - state: equipped-head-light-dog
         shader: unshaded
       # Starlight - Start
       head-avali:

@@ -11,7 +11,13 @@
             "name": "icon"
         },
         {
+            "name": "icon-unshaded"
+        },
+        {
             "name": "icon-flash"
+        },
+        {
+            "name": "light-overlay"
         },
         {
             "name": "off-equipped-HELMET",
