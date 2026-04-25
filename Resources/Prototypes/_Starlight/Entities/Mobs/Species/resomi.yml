@@ -1,11 +1,18 @@
 - type: entity
   name: Urist McRaptor
-  # CS: No BaseSpeciesPickupable
-  parent: [ BaseColdBird, BaseMobSpeciesOrganic, BaseInventoryResomi]
+  parent: [ BaseColdBird, BaseMobSpeciesOrganic, BaseSpeciesPickupable, BaseInventoryResomi]
   id: BaseMobResomi
   abstract: true
   components:
-  # CS: No Langauge system
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - Scratch
+    understands:
+    - GalacticCommon
+    - Scratch
+  # Starlight-end
   - type: Absorbable
   - type: Jump
     action: JumpResomi
@@ -28,9 +35,11 @@
         color: "#C048C2"
       Burn:
         sprite: _Starlight/Mobs/Effects/Resomi/burn_damage.rsi
-  # CS: Wait for upstream to use the other method
-  - type: Bloodstream
-    bloodReagent: ResomiBlood
+  - type: Bloodstream # Starlight
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: ResomiBlood
+        Quantity: 300
   - type: FireVisuals
     sprite: _Starlight/Mobs/Effects/onfire.rsi
     normalState: Resomi_minor_burning
@@ -57,8 +66,10 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Hunger
   - type: Puller
     needsHands: false
+  - type: Thirst
   - type: Icon
     sprite: _Starlight/Mobs/Species/Resomi/parts.rsi
     state: full
@@ -68,7 +79,7 @@
   - type: Butcherable
     butcheringType: Spike
     spawned:
-    - id: FoodMeatResomi # CS: FoodMeatChicken<FoodMeatResomi
+    - id: FoodMeatChicken
       amount: 3
   - type: MobThresholds
     thresholds:
@@ -149,7 +160,7 @@
   - type: Speech
     speechVerb: Resomi
     speechSounds: UnisexResomi
-    # CS: Allow all emotes
+    allowedEmotes: ['Chirp', 'Hisses', 'Purr', 'Growl', 'Trill', 'Scree', 'Call', 'Squawk']
   - type: TypingIndicator
     proto: resomi
   - type: Tag
@@ -160,4 +171,6 @@
     - AnomalyHost
     - Resomi
     - NotLabelable
-  # No NightVision + Flash Multiplier
+  - type: NightVision
+  - type: FlashModifier
+    modifier: 2

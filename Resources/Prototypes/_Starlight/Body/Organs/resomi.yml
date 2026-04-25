@@ -3,9 +3,17 @@
   parent: OrganHumanEyes
   name: eyes
   suffix: Resomi
-  # CS: Since Resomi have no night vision, default to default description
-  description: "The eyes of a resomi."
-  # CS: No OrganVisualization and Nightvision
+  description: "Resomi eyes have great nightvision for hunting prey in maintenance tunnels."
+  components:
+  - type: OrganVisualization
+    layer: Eyes
+    prototypes:
+      Default: MobResomiEyes
+  - type: FunctionalOrgan
+    comps:
+    - type: NightVision
+    - type: FlashModifier
+      modifier: 2
 
 - type: entity # Starlight
   id: OrganResomiHeart
@@ -18,11 +26,8 @@
     metabolizerTypes: [Resomi]
     groups:
     - id: Medicine
-    - id: Cryogenic # Frontier
     - id: Poison
     - id: Narcotic
-    - id: Aphrodisiacs # CS: Necessary to detect aphrodisiac injected solutions.
-    - id: AphrodisiacDrinks # CS: Necessary to detect aphrodisiac injected solutions.
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Resomi/organs.rsi
     state: heart-on
