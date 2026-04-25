@@ -46,9 +46,9 @@
   name: metabolizer-type-arachnid
 
 - type: metabolizerType #🌟Starlight🌟
-  id: Resomi
-  name: metabolizer-type-resomi
-
-- type: metabolizerType #🌟Starlight🌟
   id: Avali
   name: metabolizer-type-avali
+
+- type: metabolizerType #🌟Starlight🌟
+  id: Resomi
+  name: metabolizer-type-resomi
