@@ -23,7 +23,7 @@ Examples:
 
 If you make a change to an upstream C# or YAML file, **you must add comments on or around the changed lines**.
 The comments should clarify what changed, to make conflict resolution simpler when a file is changed upstream.
-If you make changes to values, to be consistent, leave a comment in the form `CS: OLD<NEW`.
+If you make changes to values, to be consistent, leave a comment in the form `Coyote: OLD<NEW`.
 
 For YAML specifically, if you add a component or add a list of contiguous fields, use block comments, but if you make limited edits to a component's fields, comment the fields individually.
 
@@ -40,13 +40,13 @@ A single line comment on a changed yml field:
 - type: entity
   id: TorsoHarpy
   name: "harpy torso"
-  parent: [PartHarpy, BaseTorso] # CS: add BaseTorso
+  parent: [PartHarpy, BaseTorso] # Coyote: add BaseTorso
 ```
 
 A change to a value (note: `OLD<NEW`)
 ```yml
   - type: Gun
-    fireRate: 4 # CS: 3<4
+    fireRate: 4 # Coyote: 3<4
     availableModes:
     - SemiAuto
 ```
@@ -54,7 +54,7 @@ A change to a value (note: `OLD<NEW`)
 A cyborg module with an added moduleId field (inline blank comment), a commented out bucket (inline blank comment), and a DroppableBorgModule that we've added (begin/end block comment).
 ```yml
   - type: ItemBorgModule
-    moduleId: Gardening # CS
+    moduleId: Gardening # Coyote
     items:
     - HydroponicsToolMiniHoe
     - HydroponicsToolSpade
@@ -73,7 +73,7 @@ A cyborg module with an added moduleId field (inline blank comment), a commented
 
 A comment on a new imported namespace:
 ```cs
-using Content.Client._CS.Emp.Overlays; // CS
+using Content.Client._CS.Emp.Overlays; // Coyote
 ```
 
 A pair of comments enclosing a block of added code:
@@ -92,7 +92,7 @@ if (TryComp<StampComponent>(uid, out var stamp))
 
 An edit to a Delta-V locale file, note the `OLD<NEW` format and the separate line for the comment.
 ```fluent
-# CS: "Job Whitelists"<"Role Whitelists"
+# Coyote: "Job Whitelists"<"Role Whitelists"
 player-panel-job-whitelists = Role Whitelists
 ```
 
